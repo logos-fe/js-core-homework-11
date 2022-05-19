@@ -41,13 +41,13 @@ h1Pos.addEventListener('click', () => {
 })
 let h = document.querySelector('.my')
 h.style.textAlign = 'left'
-function changePosH1() {  
-     if (h.style.textAlign == 'left') {
-     return h.style.textAlign = 'center'
+function changePosH1() {
+    if (h.style.textAlign == 'left') {
+        return h.style.textAlign = 'center'
     } else if (h.style.textAlign == 'center') {
-      return h.style.textAlign = 'right'
-    } else if(h.style.textAlign == 'right') {
-      return h.style.textAlign = 'left'
+        return h.style.textAlign = 'right'
+    } else if (h.style.textAlign == 'right') {
+        return h.style.textAlign = 'left'
     }
 }
 //фон параграф
@@ -56,7 +56,7 @@ pColor.style.fontSize = '13px'
 pColor.style.width = '220px'
 pColor.style.height = '25px'
 
-pColor.addEventListener('click',() => {
+pColor.addEventListener('click', () => {
     changePcolor()
 })
 
@@ -69,30 +69,30 @@ function changePcolor() {
         document.querySelector('p').style.display = 'flex'
         document.querySelector('p').style.flexDirection = 'column'
         document.querySelector('p').style.gap = '10px'
-    }    
+    }
 }
 // колір лінків
- let link = document.querySelector(".aColor")
+let link = document.querySelector(".aColor")
 
-    link.addEventListener('mouseover',()=> {
-        changeColorHttp1()
-    })
-    function changeColorHttp1 () {
-        link.style.color = 'orange'
-        link.style.fontSize = '25px'
-    }
-    link.addEventListener('mouseout',()=> {
-        changeColorHttp2()
-    })
-    function changeColorHttp2 () {
-       link.style.color = 'blue'
-       link.style.fontSize = '13px'
-    }
- 
+link.addEventListener('mouseover', () => {
+    changeColorHttp1()
+})
+function changeColorHttp1() {
+    link.style.color = 'orange'
+    link.style.fontSize = '25px'
+}
+link.addEventListener('mouseout', () => {
+    changeColorHttp2()
+})
+function changeColorHttp2() {
+    link.style.color = 'blue'
+    link.style.fontSize = '13px'
+}
+
 
 
 // div 
-let divButton = document.querySelector('.div')
+let divButton = document.querySelector('.changeDiv')
 divButton.style.width = '350px'
 divButton.style.height = '30px'
 divButton.style.fontSize = '15px'
@@ -100,43 +100,45 @@ divButton.style.fontSize = '15px'
 divButton.addEventListener('click', () => {
     changeDiv();
 })
+
 function changeDiv() {
-    let divSetColor = prompt('Колір ДІВ?', 'white')
-    let divSetFontSize = prompt('FontSize','')
-    let divSetSize = prompt('Розмір //250h, 200w', '').split(',')
-    if (divSetSize) {
-        document.querySelector('main').style.height = divSetSize[0]+'px'
-        document.querySelector('main').style.width = divSetSize[1]+'px'
+    let divSetColor = prompt('Колір background DIV?', 'white')
+    let divSetFontSize = prompt('FontSize(px)', '20')
+    let divSetTextColor = prompt('Колір тексту', 'black')
+    if (divSetColor) {
+        document.querySelector('.main').style.background = divSetColor
+    }
+    if (divSetFontSize) {
+        document.querySelector('.main').style.fontSize = divSetFontSize+'px'
+    }
+    if (divSetTextColor) {
+        document.querySelector('.main').style.color = divSetTextColor
     }
     
-    if (divSetFontSize) {
-        document.getElementsByTagName('div').style.fontSize = divSetFontSize+'px'
-    }
+    
 
-    if (divSetColor) {
-        document.getElementsByTagName('div').style.background = divSetColor
-    }
+   
 }
 /// маркер 
 
- let changeUL = document.querySelector('.changeUL')
- let ul = document.querySelector(".ul1")
+let changeUL = document.querySelector('.changeUL')
+let ul = document.querySelector(".ul1")
 
-    changeUL.addEventListener('click',()=> {
-        changeLI()
-    })
-    ul.style.listStyleType == 'circle'
-    function changeLI () {
-        if (ul.style.listStyleType == 'circle') {
-            ul.style.listStyleType = "square"
-        } else {
-            ul.style.listStyleType = "circle"
-        }
-       
+changeUL.addEventListener('click', () => {
+    changeLI()
+})
+ul.style.listStyleType == 'circle'
+function changeLI() {
+    if (ul.style.listStyleType == 'circle') {
+        ul.style.listStyleType = "square"
+    } else {
+        ul.style.listStyleType = "circle"
     }
 
+}
 
-    // сайт
+
+// сайт
 let httpButton = document.querySelector('.newHttp')
 httpButton.style.width = '350px'
 httpButton.style.height = '30px'
@@ -145,7 +147,7 @@ httpButton.style.fontSize = '15px'
 httpButton.addEventListener('click', () => {
     addA();
 })
-function addA () {
-   
+function addA() {
+    
 }
 
