@@ -148,6 +148,9 @@ httpButton.addEventListener('click', () => {
     addA();
 })
 function addA() {
-    
+    let link = prompt('сайт?')
+    let div = document.createElement('p');
+    div.innerHTML = `https://${link}`
+    document.querySelector('p').append(div)
 }
 
